@@ -28,20 +28,22 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
     getNotes().then(oldNotes => {
-        var newNote = {
+        const newNote = {
             title:req.body.title, text:req.body.text
         }
-        var newNotes = [...oldNotes, newNote]
+        const newNotes = [...oldNotes, newNote]
         writeFile('db/db.json', JSON.stringify(newNotes)).then(() => res.json({
             msg:'ok'
         }))
     })
-})
+});
+
 app.delete('/api/notes/:id', (req, res) => {
     getNotes().then(oldNotes => {
         console.log(oldNotes)
     })
-})
+});
+
 app.listen(PORT, () => {
     console.log(`Running on http://localhost:${PORT}`)
 });
