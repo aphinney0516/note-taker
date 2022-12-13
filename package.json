@@ -1,6 +1,25 @@
 {
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "An app for taking notes that runs off of Express.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aphinney0516/note-taker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aphinney0516/note-taker/issues"
+  },
+  "homepage": "https://github.com/aphinney0516/note-taker#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0"
   }
 }
